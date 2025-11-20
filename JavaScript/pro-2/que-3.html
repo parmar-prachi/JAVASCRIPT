@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Data Usage Alert System</title>
+</head>
+
+<body>
+    <script>
+        let data = prompt("Enter your Total data used in a month (in GB):");
+        data = Number(data);
+
+        if (data < 5) {
+            alert("Low usage");
+        } else if (data >= 5 && data <= 15) {
+            alert("Normal usage");
+        } else {
+            alert("Heavy usage, consider a bigger plan");
+        }
+    </script>
+</body>
+
+</html>

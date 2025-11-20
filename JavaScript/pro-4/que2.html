@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square & Cube Calculator</title>
+</head>
+
+<body>
+    <h2 id="result"></h2>
+    <script>
+
+        let number = parseFloat(prompt("Enter the Number:-"));
+
+        function findSquare(n) {
+            return n * n;
+        }
+        function findCube(n) {
+            return n * n * n;
+        }
+
+        const square = findSquare(number);
+        const cube = findCube(number);
+
+
+        document.getElementById("result").innerHTML =
+            `Number is :  ${number} , Square is :  ${square} , Cube is :  ${cube}`;
+        console.log(`Your Number is:- ${number} , square is:- ${square} and cube is:- ${cube}`)
+    </script>
+</body>
+
+</html>

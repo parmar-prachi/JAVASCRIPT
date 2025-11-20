@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Suggestion System</title>
+</head>
+
+<body>
+    <script>
+
+        let age = parseInt(prompt("Enter your age:-"));
+        let weight = parseFloat(prompt("Enter your weight (in kg):-"));
+
+        let message = "";
+
+
+
+        if (age > 18 && age <= 25) {
+            if (weight >= 50 && weight <= 70) {
+                message = "You are fit for your age.";
+            } else if (weight < 50) {
+                message = "You are underweight for your age. Consider a healthy diet.";
+            } else {
+                message = "You are overweight for your age. Try to exercise regularly.";
+            }
+        }
+
+        else if (age >= 26 && age <= 40) {
+            if (weight >= 55 && weight <= 80) {
+                message = "You are fit for your age.";
+            } else if (weight < 55) {
+                message = "You are underweight for your age. Consider a healthy diet.";
+            } else {
+                message = "You are overweight for your age. Try to maintain a balanced lifestyle.";
+            }
+        }
+
+        else if (age > 40 && age <= 60) {
+            if (weight >= 60 && weight <= 85) {
+                message = "You are fit for your age.";
+            } else if (weight < 60) {
+                message = "You are underweight for your age. Consider a healthy diet.";
+            } else {
+                message = "You are overweight for your age. Regular checkups and light exercise are recommended.";
+            }
+        }
+
+        else {
+            message = "Please enter a valid age (above 18).";
+        }
+
+        // Displaying output
+
+        console.log(`Your age is ${age} and your weight is ${weight}kg. Suggestion: ${message}`);
+    </script>
+</body>
+
+</html>

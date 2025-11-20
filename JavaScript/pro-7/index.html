@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Task & Habit Tracker</title>
+
+    <!-- Custom CSS -->
+     <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Smart Task & Habit Tracker</h1>
+    <div class="container">
+
+        <div class="form-box">
+            <h3>Add New Task</h3>
+            <input type="text" id="title" placeholder="Task Title" />
+            <input type="text" id="description" placeholder="Description" />
+            <input type="text" id="category" placeholder="Category" />
+            <input type="date" id="dueDate" />
+            <button onclick="addTask()">Add Task</button>
+        </div>
+
+        <div class="search-filter">
+            <input type="text" id="search" placeholder="Search by title/category" onkeyup="renderTasks()" />
+            <select id="filter" onchange="renderTasks()">
+                <option value="all">All</option>
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+                <option value="overdue">Overdue</option>
+            </select>
+        </div>
+
+        <div class="task-list" id="taskList"></div>
+
+        <div class="dashboard" id="dashboard"></div>
+    </div>
+
+   <script src="./pro-7.js"></script>
+</body>
+
+</html>

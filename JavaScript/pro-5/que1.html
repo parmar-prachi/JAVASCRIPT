@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Destinations Input</title>
+</head>
+
+<body>
+    <h2> Smart Travel Planner (See Output in Console)</h2>
+
+    <script>
+
+        // Step 1: Collect Travel Destinations
+
+        const travelList = [];
+        const totalPlaces = 5;
+
+        for (let i = 0; i < totalPlaces; i++) {
+            const location = prompt(`Enter place ${i + 1}:`);
+            travelList.push(location);
+        }
+
+        console.log("Selected Destinations:", travelList);
+
+        // step 2 : Budget Analysis
+
+        const totalBudget = parseInt(prompt("Enter your total travel budget in ₹:"));
+        let tripAdvice = "";
+
+        if (totalBudget < 10000) {
+            tripAdvice = "Plan a short domestic trip.";
+        } else if (totalBudget <= 50000) {
+            tripAdvice = "You can plan a long domestic trip.";
+        } else {
+            tripAdvice = "International trip possible!";
+        }
+
+        console.log(`Total Budget: ₹${totalBudget}`);
+        console.log("Budget Suggestion:", tripAdvice);
+
+        // step 3 : Number of Days Calculator
+
+        const travelDays = parseInt(prompt("Enter how many days you plan to travel:"));
+        let tripType = "";
+
+        if (travelDays < 3) {
+            tripType = "Weekend Getaway";
+        } else if (travelDays <= 7) {
+            tripType = "Perfect Holiday Trip";
+        } else {
+            tripType = "Extended Vacation";
+        }
+
+        console.log("Days Planned:", travelDays);
+        console.log("Trip Type:", tripType);
+
+        // step 4 : Hotel Budget Suggestion 
+
+        function suggestHotel(budget, days) {
+            const perDayBudget = budget / days;
+
+            if (perDayBudget < 2000) {
+                return "Budget Hotels";
+            } else if (perDayBudget <= 5000) {
+                return "Mid-range Hotels";
+            } else {
+                return "Luxury Hotels";
+            }
+        }
+
+        const hotelOption = suggestHotel(totalBudget, travelDays);
+        console.log("Hotel Suggestion:", hotelOption);
+
+        // step 5: Final Travel Summary
+
+        console.log(`--- Travel Summary ---
+        Destinations: ${travelList.join(", ")}
+        Total Budget: ₹${totalBudget}
+        Travel Days: ${travelDays}
+        Trip Type: ${tripType}
+        Hotel Suggestion: ${hotelOption}
+        Note: ${tripAdvice}`);
+    </script>
+</body>
+
+</html>

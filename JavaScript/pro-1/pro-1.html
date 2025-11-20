@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Business Calculator</title>
+</head>
+
+<body>
+    <h2>Basic Business Calculator executed successfully using JavaScript!"</h2>
+
+    <p id="output"></p>
+
+    <script>
+
+        // Arithmetic Operations : 
+
+        let a = prompt("Enter first number:");
+        let b = prompt("Enter second number:");
+        a = Number(a);
+        b = Number(b);
+        let sum = a + b;
+
+        document.write("<h3>Basic Arithmetic Operations</h3>");
+        document.write(`Addition:" ${sum} "<br>`);
+        document.write("Subtraction: " + (a - b), "<br>");
+        document.write("Multiplication: " + (a * b), "<br>");
+        document.write("Division: " + (a / b), "<br><hr>");
+
+        // Swapping two numbers :
+
+        let c = 15, d = 30, temp;
+        temp = c;
+        c = d;
+        d = temp;
+        document.write("<h3>After Swapping:</h3>");
+        document.write(`c = " ${c} ", d = " ${d} "<br><hr>`);
+
+        // Grade Calculation - Direct Value : 
+
+        let marks = 90;
+        let grade = "A+";
+        document.write("<h3>Grade Calculation</h3>");
+        document.write(`Marks: " ${marks} ", Grade: " ${grade} "<br><hr>`);
+
+        // Bill Calculation :
+
+        let price = 150, quantity = 5;
+        let total = price * quantity;
+        let discount = total * 0.10;
+        let net = total - discount;
+        document.write("<h3>Bill Calculation</h3>");
+        document.write(`Total: " ${total}  "<br>Discount: " ${discount} "<br>Net Amount: " ${net} "<br><hr>`);
+
+
+        // Simple Interest : 
+
+        let p = 5000, r = 5, t = 2;
+        let si = (p * r * t) / 100;
+        document.write("<h3>Simple Interest</h3>");
+        document.write(`Simple Interest: " ${si} "<br><hr>`);
+
+        // Employee Salary : 
+        
+        let basic = 30000;
+        let hra = basic * 0.20;
+        let da = basic * 0.10;
+        let gross = basic + hra + da;
+        document.write("<h3>Employee Salary Calculation</h3>");
+        document.write(`Basic: " ${basic} "<br>HRA: " ${hra} "<br>DA: " ${da} "<br>Gross Salary: " ${gross}"<hr>`);
+        console.log("Gross Salary: ", gross);
+
+
+        document.getElementById("output").innerHTML = "Basic Business Calculator executed successfully!";
+        
+    </script>
+    </script>
+</body>
+
+</html>
