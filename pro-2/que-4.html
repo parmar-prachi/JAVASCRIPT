@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Password Logic</title>
+</head>
+
+<body>
+    <script>
+        let oldpasswordsaved = "ad1812";
+        let oldpassword = prompt("Enter old password");
+        let newpassword = prompt("Enter new password");
+        let confirmpassword = prompt("Enter confirm password");
+
+        if (oldpassword == oldpasswordsaved) {
+            if (newpassword == confirmpassword) {
+                console.log("Password changed successfully.");
+            }
+            else {
+                console.log("Passwords do not match.");
+            }
+
+        } else {
+            console.log("Old password is incorrect.");
+        }
+
+        console.log(`your old password is : ${oldpassword}, your new Password is : ${newpassword} and your confirm password is : ${confirmpassword}`)
+    </script>
+</body>
+
+</html>

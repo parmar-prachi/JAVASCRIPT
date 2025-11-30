@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Order System</title>
+</head>
+
+<body>
+    <h1>Cafe Order System</h1>
+    <script>
+      
+        let selection;
+        let billTotal = 0;
+        let itemPrice = 0;
+        let itemCount = 0;
+        let maxPrice = 0;
+        let minPrice = 0;
+        let productLabel = "";
+        let isFirstOrder = true;
+
+        alert("Welcome to our café!");
+        do {
+            let menuText = "Select your item from the menu:-\n  1] Coffee - ₹50  \n" +
+                "  2] Tea - ₹30  \n" +
+                "  3] Sandwich - ₹80  \n" +
+                "  4] Pastry - ₹100  \n" +
+                "  0] Exit  \n";
+
+            selection = prompt(menuText + "Enter your choice (1-4) or 0 to exit and show your order details and bill.");
+            if (selection === "1") {
+                productLabel = "Coffee";
+                itemPrice = 50;
+            }
+            else if (selection === "2") {
+                productLabel = "Tea";
+                itemPrice = 30;
+            }
+            else if (selection === "3") {
+                productLabel = "Sandwich";
+                itemPrice = 80;
+            }
+            else if (selection === "4") {
+                productLabel = "Pastry";
+                itemPrice = 100;
+            }
+            else if (selection === "0") {
+                console.log("Thank you for visiting our café, have a nice day...");
+                break;
+            }
+            else {
+                alert("Invalid choice! Please try again.");
+                continue;
+            }
+
+            billTotal = billTotal + itemPrice;
+            itemCount = itemCount + 1;
+
+            if (isFirstOrder) {
+                maxPrice = itemPrice;
+                minPrice = itemPrice;
+                isFirstOrder = false;
+            }
+            else {
+                if (itemPrice > maxPrice) maxPrice = itemPrice;
+                if (itemPrice < minPrice) minPrice = itemPrice;
+            }
+
+            document.write(`You ordered ${productLabel} — Price: ₹${itemPrice} <br>`);
+            document.write(`Current Total: ₹${billTotal} <br><br>`);
+
+        } while (selection != 0);
+
+        document.write("<hr>");
+        document.write("<h2>View Your Bill</h2>");
+        let subTotal = billTotal;
+        let tax = subTotal * 0.05;
+        let grossTotal = subTotal + tax;
+
+        document.write(`Total Items Ordered: ${itemCount} <br>`);
+        document.write(`SubTotal : ₹${subTotal} <br>`);
+        document.write(`GST (5%): ₹${tax.toFixed(2)} <br>`);
+        document.write(`<b>Grand Total: ₹${grossTotal.toFixed(2)}</b><br><br>`);
+        document.write(`Highest Priced Item: ₹${maxPrice} <br>`);
+        document.write(`Lowest Priced Item: ₹${minPrice} <br>`);
+        document.write("<b>Thank you for visiting our café!</b><br><br> <hr>");
+
+        let discountAmount = 0;
+        let payableAmount = grossTotal;
+
+        if (subTotal > 1000) {
+            discountAmount = grossTotal * 0.20;
+        }
+        else if (subTotal > 500) {
+            discountAmount = grossTotal * 0.10;
+        }
+        else {
+            discountAmount = 0;
+        }
+
+        payableAmount = grossTotal - discountAmount;
+        document.write("<h2> Discount Details</h2>");
+        document.write(`Original Bill: ₹ ${grossTotal.toFixed(2)}<br>`);
+        document.write(`Discount: ₹ ${discountAmount.toFixed(2)}<br>`);
+        document.write(`<b>Final Bill: ₹ ${payableAmount.toFixed(2)}</b><br><br><hr>`);
+
+        // Password section 
+
+        let cafePass = "3421";
+        let enteredOldPass = prompt("Enter the Old Password:- ");
+        let newPassword = "";
+
+        if (enteredOldPass === cafePass) {
+            newPassword = prompt("Enter your NEW password:");
+            cafePass = newPassword;
+            alert("Password changed successfully!");
+        } else {
+            alert("Incorrect old password. Try again.");
+        }
+
+        document.write("<h2>Password Detail</h2>");
+        document.write(`Old Password: ${enteredOldPass} <br>`);
+
+        if (newPassword !== "") {
+            document.write(`New Password: ${newPassword}`);
+        } else {
+            document.write(`New Password: Not Changed`);
+        }
+
+    </script>
+</body>
+
+</html>
+
+<!-- output :
+   
+Cafe Order System
+You ordered Coffee — Price: ₹50
+Current Total: ₹50
+
+You ordered Sandwich — Price: ₹80
+Current Total: ₹130
+
+You ordered Pastry — Price: ₹100
+Current Total: ₹230
+
+View Your Bill
+Total Items Ordered: 3
+SubTotal : ₹230
+GST (5%): ₹11.50
+Grand Total: ₹241.50
+
+Highest Priced Item: ₹100
+Lowest Priced Item: ₹50
+Thank you for visiting our café!
+
+Discount Details
+Original Bill: ₹ 241.50
+Discount: ₹ 0.00
+Final Bill: ₹ 241.50
+
+Password Detail
+Old Password: 3421
+New Password: 1234
+
+-->

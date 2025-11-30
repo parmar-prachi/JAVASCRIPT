@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Monthly Budget Planner</title>
+</head>
+
+<body>
+    <script>
+        
+        let income = prompt("Enter your monthly income (₹):");
+        income = Number(income);
+
+        let message = "";
+
+        if (income < 10000) {
+            message = "Spend cautiously and save more!";
+        } else if (income <= 30000) {
+            message = "Balanced budget!";
+        } else {
+            message = "Your income is great! Consider investing in SIPs.";
+        }
+
+        console.log(`your Monthly Income is ${income} so I will suggest ${message}`);
+    </script>
+</body>
+
+</html>
