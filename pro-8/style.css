@@ -1,0 +1,177 @@
+:root {
+    --color-bg: #1f2937;
+    --color-card: #2f3b4e;
+    --color-text-primary: #f3f4f6;
+    --color-text-secondary: #d1d5db;
+    --color-accent: #3b82f6;
+    --color-accent-hover: #2563eb;
+    --color-danger: #ef4444;
+    --color-danger-hover: #dc2626;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--color-bg);
+    color: var(--color-text-primary);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    padding: 30px;
+    width: 90%;
+    max-width: 900px;
+}
+
+h1 {
+    color: var(--color-text-primary);
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+h2 {
+    color: var(--color-accent);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+/* Card Styles */
+
+.countdown-box,
+.quote-box {
+    background: var(--color-card);
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.countdown-box {
+    width: 100%;
+    max-width: 400px;
+}
+
+.quote-box {
+    width: 100%;
+    max-width: 550px;
+}
+
+.countdown-box:hover,
+.quote-box:hover {
+    transform: translateY(-5px);
+}
+
+#countdownDisplay {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 20px 0;
+    color: #10b981;
+    /* Green accent */
+    letter-spacing: 0.5px;
+}
+
+/* Button Styles */
+
+button {
+    padding: 10px 20px;
+    margin: 10px 8px;
+    border: none;
+    background: var(--color-accent);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: var(--color-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Quote Text */
+
+#quoteText {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: var(--color-card);
+    padding: 40px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease-out;
+    border: 2px solid var(--color-accent);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modal-content h2 {
+    font-size: 2rem;
+    color: var(--color-text-primary);
+}
+
+.modal-content p {
+    color: var(--color-text-secondary);
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    background: var(--color-danger);
+    margin-top: 15px;
+}
+
+.close-btn:hover {
+    background: var(--color-danger-hover);
+    transform: translateY(-2px);
+}
