@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+
+    <!-- icons -->
+    <link rel="stylesheet" href="./assets/css/bootstrap-icons.min.css">
+    <!-- fonts -->
+    <link rel="stylesheet" href="./assets/css/font.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <!-- topbar -->
+    
+        <div class="topbar">
+            <p class="text-center p-2">Free shipping on all U.S. orders $50+</p>
+        </div>
+    
+        <!-- navbar -->
+    
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <div class="navbar aling-items-center w-100">
+                        <ul class="nav">
+                            <li class="nav-item"><a class="nav-link active text-dark" aria-current="page"
+                                    href="./index.html">HOME</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link text-dark" href="#">SHOP</a></li>
+                            <li class="nav-item"><a class="nav-link text-dark" href="#">PRODUCT</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" href="#"
+                                    role="button" aria-expanded="false">PAGES</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                </ul>
+                            </li>
+                            </li>
+                            <li class="nav-item"><a class="nav-link text-dark" href="#">BLOG</a></li>
+                        </ul>
+                        <div class="logo-img d-flex"><a href="./index.html"><img src="./assets/images/logo.png"
+                                    class="img-fluid" alt="logo"></a></div>
+                        <div class="add-pro"><a href="./add-product.html">+Add Product</a></div>
+                        <div class="view-pro"><a href="./view-product.html">View Product</a></div>
+    
+                        <div class="bar-icon">
+                            <ul class="d-flex fs-4 gap-4">
+                                <li><a href="#" class="text-dark"><i class="bi bi-search"></i></a></li>
+                                <li><a href="#" class="text-dark"><i class="bi bi-person"></i></i></a></li>
+                                <li><a href="./cart.html" class="text-dark" id="cart-icon-link"><i
+                                            class="bi bi-cart"></i></a></li>
+                                <li><a href="#" class="text-dark"><i class="bi bi-star"></i></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container py-5">
+            <h1 class="text-center">Add New Product</h1>
+        
+            <form id="addProductForm" class="mt-4">
+                <div class="mb-3">
+                    <label class="form-label">Product ID</label>
+                    <input type="number" id="productId" required class="form-control">
+                </div>
+        
+                <div class="mb-3">
+                    <label class="form-label">Product Name</label>
+                    <input type="text" id="productName" required class="form-control">
+                </div>
+        
+                <div class="mb-3">
+                    <label class="form-label">Price (USD)</label>
+                    <input type="number" id="productPrice" required class="form-control">
+                </div>
+        
+                <div class="mb-3">
+                    <label class="form-label">Stock Quantity</label>
+                    <input type="number" id="productQty" required class="form-control">
+                </div>
+        
+                <div class="mb-3">
+                    <label class="form-label">Image URL</label>
+                <input type="file" id="productImage" required class="form-control" placeholder="./assets/images/jpg">
+                </div>
+        
+                <div class="mb-3">
+                    <label class="form-label">Description</label>
+                    <textarea id="productDesc" class="form-control" rows="3"></textarea>
+                </div>
+        
+                <button class="btn btn-dark w-100" type="submit">Save Product</button>
+            </form>
+        
+            <div class="text-center mt-4">
+                <a href="view-product.html">View All Products →</a>
+            </div>
+        </div>
+
+    </main>
+    <footer></footer>
+    <script src="./web.js"></script>
+    <script src="./bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
