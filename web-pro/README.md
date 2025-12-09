@@ -68,18 +68,26 @@ JavaScript (ES6+)
 LocalStorage for saving data 
 
 -- HOME PAGE : 
-<img width="1280" height="800" alt="Screenshot 2025-12-09 at 4 40 43 PM" src="https://github.com/user-attachments/assets/f5c22fc1-be94-459e-b241-c78f1c767920" />
-<img width="1280" height="800" alt="Screenshot 2025-12-09 at 4 40 39 PM" src="https://github.com/user-attachments/assets/cd34b0aa-8f0e-4d6b-bfbe-86ddd91d4fd1" />
+
+<img width="1280" height="677" alt="Screenshot 2025-12-09 at 4 40 39 PM" src="https://github.com/user-attachments/assets/c63160b1-9e07-4217-8c15-c412df724def" />
+
+<img width="1243" height="580" alt="Screenshot 2025-12-09 at 4 40 43 PM" src="https://github.com/user-attachments/assets/76857b2a-ecf9-42ee-997f-2445df1abd20" />
 
 ADD NEW PRODUCT PAGE :
-<img width="1280" height="800" alt="Screenshot 2025-12-09 at 4 43 15 PM" src="https://github.com/user-attachments/assets/3b3dc5a6-4f2e-44da-9a44-4212f5f57265" />
+
+<img width="1275" height="679" alt="Screenshot 2025-12-09 at 4 43 15 PM" src="https://github.com/user-attachments/assets/728dd6d4-be16-4577-bb5f-a4643a72aa81" />
 
 VIEW PRODUCT LIST :
-<img width="1280" height="800" alt="Screenshot 2025-12-09 at 4 44 35 PM" src="https://github.com/user-attachments/assets/048c2dc5-cfaa-44d0-9fa7-d5a048195fbd" />
+
+<img width="1280" height="677" alt="Screenshot 2025-12-09 at 4 44 35 PM" src="https://github.com/user-attachments/assets/a7e4d3a0-6b27-41eb-a3c8-48d7a740b50b" />
 
 CART PAGE :
-<img width="1280" height="800" alt="Screenshot 2025-12-09 at 4 45 39 PM" src="https://github.com/user-attachments/assets/b08a28be-bb37-41bd-a869-db11176f9217" />
+
+<img width="1280" height="676" alt="Screenshot 2025-12-09 at 4 45 39 PM" src="https://github.com/user-attachments/assets/54ec3f54-39d4-4955-8e01-34064c498483" />
+
 
 VIEW DETAILS OF PRODUCTS : 
-<img width="1280" height="800" alt="Screenshot 2025-12-09 at 4 47 04 PM" src="https://github.com/user-attachments/assets/68ea859c-4861-4fcd-a7b6-21242658df48" />
+
+<img width="1280" height="800" alt="Screenshot 2025-12-09 at 4 47 04 PM" src="https://github.com/user-attachments/assets/da5a4b4a-d2a6-4110-b6fb-babd4762f86f" />
+
 
