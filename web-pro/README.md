@@ -88,6 +88,4 @@ CART PAGE :
 
 VIEW DETAILS OF PRODUCTS : 
 
-<img width="1280" height="800" alt="Screenshot 2025-12-09 at 4 47 04 PM" src="https://github.com/user-attachments/assets/da5a4b4a-d2a6-4110-b6fb-babd4762f86f" />
-
-
+<img width="1274" height="670" alt="Screenshot 2025-12-09 at 4 47 04 PM" src="https://github.com/user-attachments/assets/0f19af9c-c6a9-45cc-9866-b76cec97f3b8" />
