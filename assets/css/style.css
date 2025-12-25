@@ -1,0 +1,481 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.py {
+    margin-bottom: 100px;
+}
+
+.pt {
+    margin-top: 100px;
+}
+
+:root {
+    --bs-primary-color: #ce7353;
+    --bs-secondary-color: #faf9f5;
+    --bs-text-color: #3d3929;
+    --bs-title-font: 'Inter';
+    --bs-discription-font: 'Crimson Pro';
+}
+
+body {
+    background: #faf9f5 !important;
+    font-family: var(--bs-title-font), sans-serif;
+    font-family: var(--bs-discription-font);
+    color: var(--bs-text-color) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    font-family: var(--bs-title-font), sans-serif;
+    color: var(--bs-text-color) !important;
+}
+
+a,
+li {
+    list-style: none;
+    text-decoration: none !important;
+}
+
+ul li a {
+    font-family: var(--bs-title-font), sans-serif;
+    color: var(--bs-text-color);
+    font-size: 15px !important;
+    font-weight: 500 !important;
+
+
+}
+
+.navbar-brand {
+    font-size: 20px;
+    color: var(--bs-text-color) !important;
+    font-weight: 600;
+}
+
+.navbar-brand img {
+    width: 23px;
+    height: 27px;
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    align-items: center;
+    background-color: #ce7353 !important;
+    color: white !important;
+}
+
+.btn span {
+    align-items: center;
+    line-height: 2.2;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+}
+
+.banner p {
+    font-family: var(--bs-discription-font);
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+    z-index: 3;
+
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.5),
+            transparent 50%,
+            rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 1));
+    z-index: 2;
+}
+
+.banner::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/bhagavad-gita-banner.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    z-index: 1;
+
+}
+
+.banner h1 {
+    position: relative;
+    z-index: 3;
+    color: white !important;
+    font-size: 60px;
+    text-align: center;
+    padding-top: 5%;
+    font-weight: 600;
+}
+
+button {
+    position: relative;
+    z-index: 3;
+    color: #ce7353;
+    background-color: white;
+    height: 50px;
+    width: 200px;
+    border: none;
+    border-radius: 10px !important;
+    font-size: 14px !important;
+}
+
+.btn-primary {
+    position: relative;
+    z-index: 3;
+    color: white;
+    background-color: #ce7353;
+    height: 50px;
+    width: 200px;
+    border: none;
+    border-radius: 10px !important;
+    font-size: 14px !important;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 3;
+}
+
+.title {
+    font-weight: 600;
+    font-family: var(--bs-discription-font);
+}
+
+.card-body h6 {
+    color: #ce7353 !important;
+}
+
+.card-body h5 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-body p {
+    font-size: 14px;
+    color: #3d3929cc;
+}
+
+.card {
+    padding: 10px;
+}
+
+.form-section .row {
+    display: flex;
+    width: 1140px;
+    height: 436px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.form-pic {
+    padding: 0;
+    position: relative;
+}
+
+.form-pic img {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.form-pic .text-content {
+    position: absolute;
+    background-color: white;
+    bottom: 10px;
+    left: 50px;
+    right: 40px;
+    padding: 10px;
+    z-index: 2;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.form-pic .text-content p {
+    font-size: 14px;
+    font-family: var(--bs-discription-font);
+    font-weight: 500;
+    margin: 0;
+    color: #625E51 !important;
+}
+
+.form-pic .text-content span {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px;
+    color: #ce7353 !important;
+}
+
+.form-pic .img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to left,
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.4));
+    border-radius: 0 20px 20px 0;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    color: white !important;
+}
+
+.subtitle {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    position: relative;
+}
+
+.subtitle::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-image: url("../images/subtitle-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+}
+
+.breadcrumb {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px !important;
+}
+
+.subtitle::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.chapter-card,
+.verses-detail {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.chapter-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.chapter-detail h3 {
+    font-size: 18px;
+    font-family: var(--bs-discription-font);
+    font-weight: 600;
+    text-align: center;
+}
+
+.chapter-detail p {
+    font-family: var(--bs-discription-font);
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+}
+
+.chapter p {
+    font-family: var(--bs-discription-font);
+    font-size: 18px;
+    line-height: 2.5;
+}
+
+.sticky-sidebar {
+    width: 400px;
+    height: 421px;
+}
+
+.bg-lighte {
+    background-color: #F7F7F0 !important;
+}
+
+.sticky-side img {
+    width: 399.2px;
+    height: 298.6px;
+}
+
+.btn-secondary {
+    width: 180px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid #464646;
+}
+
+.form-content input {
+    width: 80%;
+    height: 12%;
+    background-color: #F5F3EE;
+    border: 1px solid #B4B2A7;
+}
+
+.btn-ternary {
+    width: 80%;
+    height: 12%;
+    background-color: #ce7353;
+}
+
+.title1 p {
+    font-weight: 500;
+    color: #757266;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    outline: none;
+    border: none !important;
+}
+
+.accordion-button {
+    background-color: #faf9f5 !important;
+    font-weight: 500;
+    border: none !important;
+}
+
+.accordion-header:focus {
+    background-color: #faf9f5 !important;
+    color: #3d3929;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: #3d3929;
+    border: none !important;
+}
+
+.accordion-body {
+    color: #3d3929e6;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.footerlogo span {
+    font-size: 14px;
+    color: #3d3929cc;
+    font-weight: 300;
+    display: block;
+    margin-top: 20px;
+    font-family: var(--bs-discription-font);
+}
+
+.verses-detail h3 {
+    color: #c96442 !important;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--bs-title-font), sans-serif;
+
+}
+
+.verses-detail {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #dad9d433;
+    padding: 45px;
+    gap: 35px;
+}
+
+.verses-detail:hover {
+    background-color: #f5f0ea;
+}
+
+.shlok-detail h3 {
+    color: #c96442 !important;
+}
+
+.shlok-detail h4 {
+    color: #9C959A !important;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: var(--bs-discription-font);
+}
+
+.footerspan {
+    color: #9C959A !important;
+    font-size: 14px;
+}
+
+.icons i {
+    color: #9C959A;
+}
+
+.footerdetail h4 {
+    font-size: 14px;
+    font-family: var(--bs-discription-font);
+    color: #3d3929;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.footerdetail li a {
+    font-size: 14px;
+    font-weight: 200;
+    color: #9C959A !important;
+    font-family: var(--bs-discription-font);
+}
+
+.store p {
+    color: #9C959A;
+    font-size: 14px;
+    font-family: var(--bs-discription-font);
+}
+
+.store a {
+    color: #ce7353 !important;
+    font-size: 14px;
+    font-family: var(--bs-discription-font);
+}
+
+.playstore a img {
+    width: 140px;
+    height: 40px;
+}
+
+.shlok-detail span,
+.shlok-detail p {
+    line-height: 2;
+}
