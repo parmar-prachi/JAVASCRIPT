@@ -1,209 +1,133 @@
-/* FETCH FUNCTION */
+<<!DOCTYPE html>
+<html lang="en">
 
-async function fetchData(url) {
-    const response = await fetch(url);
-    return await response.json();
-}
-/*  SUBSCRIBE FUNCTION */
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhagavad Gita in Hindi & English with Audio</title>
+    <!-- style file attachment-->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- bootstrap file attachment -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- bootstrap Icon file attachment -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-function subscribeUser() {
-    const name = document.getElementById("userName").value.trim();
-    const email = document.getElementById("userMail").value.trim();
+    <!-- font file attachment -->
+    <link rel="stylesheet" href="./assets/css/fonts.css">
+    <!-- fevicon icon -->
+    <link rel="shortcut icon" href="./assets/images/logo.webp" type="image/x-icon">
 
-    if (name === "" || email === "") {
-        alert("Please fill all fields");
-        return;
-    }
+</head>
 
-    let subscribers =
-        JSON.parse(localStorage.getItem("subscribers")) || [];
+<body style="background-color: #FAF9F5;">
+ <header>
+        <nav class="navbar navbar-expand-lg d-flex mb-1">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/images/logo.webp" class="me-2" alt="img">
+                    Bhagavad Gita</a>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 ">
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="./All-chapters.html">All Chapters</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link " href="#"> Quotes</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="#">About Gita</a>
+                        </li>
 
-    subscribers.push({ name, email });
+                    </ul>
+                </div>
 
-    localStorage.setItem(
-        "subscribers",
-        JSON.stringify(subscribers)
-    );
+                <li class="nav-item justify-content-end align-items-center">
+                    <a class="nav-link btn" href="#">
+                        <i class="bi bi-person"></i></i><span class="ms-1">Sign in</span></a>
+                </li>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="subtitle">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item "><a href="./index.html" class="text-white">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><a href="./chapters.html" class="text-white">All
+                        Chapters</a></li>
+            </ol>
+        </div>
 
-    document.getElementById("userName").value = "";
-    document.getElementById("userMail").value = "";
-
-    alert("Subscription Successful!");
-}
-
-/* FAQ SECTION (index.html) */
-
-const faqItems = document.querySelectorAll(".faq-item");
-
-faqItems.forEach(item => {
-  const question = item.querySelector(".faq-question");
-
-  question.addEventListener("click", () => {
-    faqItems.forEach(faq => {
-      if (faq !== item) {
-        faq.classList.remove("active");
-        faq.querySelector(".icon").textContent = "+";
-      }
-    });
-
-    item.classList.toggle("active");
-
-    const icon = item.querySelector(".icon");
-    icon.textContent = item.classList.contains("active") ? "×" : "+";
-  });
-});
-
-
-/* CHAPTER LIST PAGE (chapters.html) */
-
-const chaptersBox = document.getElementById("chapters");
-
-if (chaptersBox) {
-    showAllChapters();
-}
-
-async function showAllChapters() {
-    const chapters = await fetchData("https://vedicscriptures.github.io/chapters");
-    let output = "";
-
-    chapters.forEach(chapter => {
-        output += `
-        <div class="col-md-6 mb-4">
-            <div class="card chapter-card"
-                 onclick="openChapterPage(${chapter.chapter_number})">
-                <div class="card-body">
-                    <h6>Chapter ${chapter.chapter_number}</h6>
-                    <h5 class="mt-3">${chapter.name}</h5>
-                    <p class="mt-4">
-                        ${chapter.summary.hi.slice(0,150)}...
-                    </p>
-                    <p class="mt-4">
-                        <i class="bi bi-list-ul me-2"></i>
-                        ${chapter.verses_count} Verses
-                    </p>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div id="slok"></div>
                 </div>
             </div>
-        </div>`;
-    });
+        </section>
 
-    chaptersBox.innerHTML = output;
-}
-
-function openChapterPage(number) {
-    window.location.href = `chapter.html?no=${number}`;
-}
-
-/* SINGLE CHAPTER PAGE (chapter.html)*/
-const chapterBox = document.getElementById("chapter");
-const versesBox = document.getElementById("verses");
-
-if (chapterBox) {
-    showSingleChapter();
-}
-
-async function showSingleChapter() {
-    const params = new URLSearchParams(window.location.search);
-    const chapterNo = params.get("no");
-
-    const chapter = await fetchData(
-        `https://vedicscriptures.github.io/chapter/${chapterNo}`
-    );
-
-    chapterBox.innerHTML = `
-        <div class="col-12">
-            <div class="subtitle">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="./index.html" class="text-white">Home</a>
-                    </li>
-                    <li class="breadcrumb-item active">
-                        <a href="./chapters.html" class="text-white">
-                            Chapter : ${chapterNo}
-                        </a>
-                    </li>
-                </ol>
+    </main>
+    <footer style="border-top: 1px solid #dad9d4; ">
+        <div class="container">
+            <div class="row" style="border-bottom:1px solid #dad9d4 ;">
+                <div class="col-3 footer-logo mt-5">
+                    <a class="navbar-brand" href="#">
+                        <img src="./assets/images/logo.webp" class="me-2" alt="img"> Bhagavad Gita</a>
+                    <span class="fs-6 footer-tag">Ancient wisdom for modern life</span>
+                    <div class="icons mt-2">
+                        <a href="#"> <i class="bi bi-facebook me-3"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x me-3"></i></a>
+                        <a href="#"><i class="bi bi-github me-3"></i></a>
+                    </div>
+                </div>
+                <div class="col-3 mt-5 mb-5 footer-details">
+                    <h4>Quick Links</h4>
+                    <li><a href="#">Mobile App</a></li>
+                    <li class="mt-1"><a href="#">Gita AI</a></li>
+                    <li class="mt-1"><a href="#">Quotes</a></li>
+                    <li class="mt-1"><a href="#">Donate</a></li>
+                </div>
+                <div class="col-3 mt-5 footer-details">
+                    <h4>Resources</h4>
+                    <li class="mt-1"><a href="#"> About Gita</a></li>
+                    <li class="mt-1"><a href="#"> Characters</a></li>
+                    <li class="mt-1"><a href="#">Acknowledgements</a></li>
+                    <li class="mt-1"><a href="#">API</a></li>
+                </div>
+                <div class="col-3 mt-5 footer-details ">
+                    <h4>Legal & Contact</h4>
+                    <li class="mt-1"><a href="#">Privacy</a></li>
+                    <li class="mt-1"><a href="#">Terms</a></li>
+                    <li class="mt-1"><a href="#">Copyright</a></li>
+                    <li class="mt-1"><a href="#">Contact Us</a></li>
+                </div>
             </div>
-        </div>
-
-        <div class="chapter-detail pt-3 mt-5"
-             style="border-radius:20px; background:#F5F0EA;">
-            <h3>
-                Chapter ${chapter.chapter_number} : ${chapter.name}
-            </h3>
-            <p>Total Verses : ${chapter.verses_count}</p>
-        </div>
-
-        <p class="pt-5">${chapter.summary.hi}</p>
-    `;
-
-    versesBox.innerHTML = "";
-
-    for (let i = 1; i <= chapter.verses_count; i++) {
-        const verse = await fetchData(
-            `https://vedicscriptures.github.io/slok/${chapterNo}/${i}`
-        );
-
-        versesBox.innerHTML += `
-            <div class="verses-details"
-                 style="cursor:pointer"
-                 onclick="openVersePage(${chapterNo}, ${i})">
-                <h3>Verse ${i}</h3>
-                <p>${verse.tej.ht.slice(0,150)}...</p>
+            <div class="footer-bottom pb-5 pt-4 d-flex justify-content-between align-items-center">
+                <div class="Copyright">
+                    <p class="pt-3">© 2025 Copyright:<a href="https://vedvyas.org/"> Ved Vyas Foundation.</a> All rights
+                        reserved.</p>
+                </div>
+                <div class="playstore ">
+                    <a href="https://play.google.com/store/apps/details?id=com.gitainitiative.bhagavadgita"><img
+                            src="./assets/images/play_store.svg" alt=""></a>
+                    <a href="https://apps.apple.com/us/app/bhagavad-gita-hindi-english/id1602895635"><img
+                            src="./assets/images/app_store.svg" alt=""></a>
+                </div>
             </div>
-        `;
-    }
-}
 
-function openVersePage(chapterNo, verseNo) {
-    window.location.href =
-        `shlok.html?cno=${chapterNo}&sno=${verseNo}`;
-}
-
-/* SHLOK PAGE (shlok.html) */
-const shlokBox = document.getElementById("slok");
-
-if (shlokBox) {
-    showShlok();
-}
-
-async function showShlok() {
-    const params = new URLSearchParams(window.location.search);
-    const chapterNo = params.get("cno");
-    const verseNo = params.get("sno");
-
-    const shlok = await fetchData(
-        `https://vedicscriptures.github.io/slok/${chapterNo}/${verseNo}`
-    );
-
-    shlokBox.innerHTML = `
-        <div class="col-6" style="margin:20px auto;">
-            <ol class="d-flex">
-                <li><a href="./index.html">Chapter ></a></li>
-                <li>
-                    <a href="./chapter.html?no=${chapterNo}">
-                        Chapter ${chapterNo} >
-                    </a>
-                </li>
-                <li>Verse ${verseNo}</li>
-            </ol>
-
-            <div class="shlok-details pt-5">
-                <p class="text-center mb-4"
-                   style="border-radius:20px;padding:20px;background:#F5F0EA;">
-                    Bhagavad Gita :
-                    Chapter ${chapterNo}, Verse ${verseNo}
-                </p>
-
-                <h3 class="text-center pb-5">
-                    ${shlok.slok}
-                </h3>
-
-                <h4>Translation</h4>
-                <p>${shlok.siva.et}</p>
-
-                <h4 class="pt-4">Commentary</h4>
-                <p>${shlok.siva.ec}</p>
-            </div>
         </div>
-    `;
-}
+    </footer> 
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
