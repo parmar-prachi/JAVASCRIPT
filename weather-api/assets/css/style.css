@@ -1,0 +1,49 @@
+body {
+    background: url("../images/background-img.jpg") no-repeat center/cover;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.weather-app {
+    background: rgba(20, 25, 50, 0.75);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    max-width: 1000px;
+    color: white;
+}
+
+.city-search {
+    max-width: 300px;
+    border-radius: 12px;
+    border: none;
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+.city-search::placeholder {
+    color: #ccc;
+}
+
+.temp-main {
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.details-card,
+.hourly-card,
+.weekly-card {
+    background: rgba(255,255,255,0.08);
+    border-radius: 18px;
+}
+
+.hour-item,
+.week-item {
+    min-width: 80px;
+    text-align: center;
+}
+
+.week-item {
+    background: rgba(255,255,255,0.08);
+    border-radius: 15px;
+    padding: 12px;
+}
