@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Weather</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/images/weather.png" type="image/x-icon">
+</head>
+
+<body>
+
+<div class="container weather-app mt-5 p-4">
+
+    <!-- HEADER -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h5 class="fw-bold text-white mb-0">Weather</h5>
+
+        <input type="text" id="cityInput" class="form-control city-search"
+               placeholder="Search city and press Enter">
+    </div>
+
+    <!-- LOCATION -->
+    <p class="text-light small mb-1">
+        <i class="bi bi-geo-alt"></i>
+        <span id="cityName"></span>
+    </p>
+
+    <h4 class="text-white mb-3">Today's Weather Forecast</h4>
+    <p class="text-white small" id="currentDate"></p>
+
+    <!-- MAIN WEATHER -->
+    <div class="row align-items-center mb-4">
+        <div class="col-md-6">
+            <h1 class="temp-main">
+                <span id="mainTemp"></span>°C
+            </h1>
+            <p class="text-white" id="weatherDesc"></p>
+        </div>
+
+        <div class="col-md-6 text-end">
+            <img id="weatherIcon" src="" width="120" style="display:none;">
+        </div>
+    </div>
+
+    <!-- WEATHER DETAILS -->
+    <div class="details-card p-3 mb-4" style="display:none;" id="detailsCard">
+        <div class="row text-center">
+            <div class="col">
+                <p class="small mb-1">Precipitation</p>
+                <p class="fw-bold" id="precipitation">--%</p>
+            </div>
+            <div class="col">
+                <p class="small mb-1">Humidity</p>
+                <p class="fw-bold" id="humidity">--%</p>
+            </div>
+            <div class="col">
+                <p class="small mb-1">Wind</p>
+                <p class="fw-bold" id="wind">-- km/h</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- HOURLY FORECAST -->
+    <div class="hourly-card p-3 mb-4" style="display:none;" id="hourlyCard">
+        <h6 class="text-white mb-3">Today</h6>
+        <div class="d-flex gap-3 overflow-auto" id="hourlyForecast"></div>
+    </div>
+
+    <!-- WEEKLY FORECAST -->
+    <div class="weekly-card p-3" style="display:none;" id="weeklyCard">
+        <h6 class="text-white mb-3">Weekly Forecast</h6>
+        <div class="row g-3" id="weeklyForecast"></div>
+    </div>
+
+</div>
+
+<script src="./assets/js/script.js"></script>
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
