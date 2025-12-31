@@ -30,4 +30,4 @@ LAYOUT :
 
 <img width="1271" height="626" alt="Screenshot 2025-12-31 at 3 45 25 PM" src="https://github.com/user-attachments/assets/78d1f538-bf07-4eee-9621-7fa21ae9a5bc" />
  
-<img width="1259" height="666" alt="Screenshot 2025-12-31 at 1 34 21 AM" src="https://github.com/user-attachments/assets/0a7eb56d-8287-4c98-bd07-6bb6f727ad9a" />
+<img width="1259" height="670" alt="Screenshot 2025-12-31 at 3 50 08 PM" src="https://github.com/user-attachments/assets/83582e7d-771b-4a81-95f0-77d3f55aa9a7" />
