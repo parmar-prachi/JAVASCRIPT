@@ -26,5 +26,8 @@ JavaScript – Fetching data from API and DOM manipulation.
 🌤️ Weather API – Provides weather details such as temperature, humidity, and weather conditions.
 This project is ideal for beginners learning to integrate APIs with frontend technologies and create interactive web applications.
 
-LAYOUT : 
+LAYOUT :
+
+<img width="1271" height="626" alt="Screenshot 2025-12-31 at 3 45 25 PM" src="https://github.com/user-attachments/assets/78d1f538-bf07-4eee-9621-7fa21ae9a5bc" />
+ 
 <img width="1259" height="666" alt="Screenshot 2025-12-31 at 1 34 21 AM" src="https://github.com/user-attachments/assets/0a7eb56d-8287-4c98-bd07-6bb6f727ad9a" />
