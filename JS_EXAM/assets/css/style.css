@@ -1,0 +1,92 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+.container {
+    max-width: 900px;
+}
+
+h3, h5 {
+    font-weight: 600;
+    color: #343a40;
+}
+
+.card {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+input,
+select {
+    border-radius: 6px !important;
+}
+
+button {
+    border-radius: 6px !important;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+}
+
+.btn-success {
+    background-color: #198754;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+}
+
+#resultList {
+    margin-top: 15px;
+}
+
+
+#resultList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.result-info {
+    font-size: 14px;
+    color: #212529;
+}
+
+.score-badge {
+    background-color: #0d6efd;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+#searchInput,
+#filterSubject {
+    font-size: 14px;
+}
+
+
+a {
+    text-decoration: none;
+    color: #0d6efd;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+    #resultList li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
