@@ -90,7 +90,7 @@ async function showAllChapters() {
 }
 
 function openChapterPage(number) {
-    window.location.href = `chapter.html?no=${number}`;
+    window.location.href = `single-chapter.html?no=${number}`;
 }
 
 /* SINGLE CHAPTER PAGE (chapter.html)*/
@@ -182,9 +182,7 @@ async function showShlok() {
             <!-- Breadcrumb -->
             <nav class="breadcrumb-center">
                 <a href="index.html">Home</a> /
-                <a href="chapter.html?no=${chapterNo}">
-                    Chapter ${chapterNo}
-                </a> /
+                <a href="single-chapter.html?no=${chapterNo}">
                 <strong>Verse ${verseNo}</strong>
             </nav>
 
